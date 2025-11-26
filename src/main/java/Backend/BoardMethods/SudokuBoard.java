@@ -40,7 +40,22 @@ public class SudokuBoard {
     }
 
 
+public int[][] get3x3Box(int index){
+    if(index>=0 && index <=8){
+        int[][] box = new int [3][3];
 
+        int startingRowIndex= (index/3)*3;  //7esbt soduko m3roofa la2etha lel boxes
+        int startingColumnIndex = (index%3)*3;
+
+        for(int i = 0 ; i<3 ; i++)
+            for(int j = 0; j<3; j++){
+                box[i][j] = board[startingRowIndex + i ][startingColumnIndex + j];
+            }
+        return box;
+
+    }else{throw new IllegalArgumentException("Invalid index");}
+
+}
 
     public int[][] getBoard() {
 
