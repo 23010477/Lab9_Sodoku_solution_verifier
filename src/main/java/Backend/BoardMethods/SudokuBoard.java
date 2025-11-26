@@ -31,10 +31,15 @@ public class SudokuBoard {
 
     public int[] getColumn(int index){
         if(index>=0 && index <=8){
-            return null;
-        }
-        return null;
+            int[] columnCopy = new int[9];
+            for(int i = 0; i<9 ;i++){
+                columnCopy[i] = board[i][index];
+            }
+            return columnCopy;
+        }else{throw new IllegalArgumentException("Invalid index");}
     }
+
+
 
 
     public int[][] getBoard() {
