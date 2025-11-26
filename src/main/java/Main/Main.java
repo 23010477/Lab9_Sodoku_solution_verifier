@@ -36,6 +36,14 @@ public class Main {
         System.out.println();
 
 
+        int colIndex = 1; // second column
+        int[] column = board.getColumn(colIndex);
+        System.out.print("Column " + colIndex + ": ");
+        for (int val : column) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+
 
 
     }
