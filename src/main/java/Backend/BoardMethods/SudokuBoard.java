@@ -19,7 +19,22 @@ public class SudokuBoard {
     }
 
 
+    public int[] getRow(int index){
+        if(index>=0 && index <=8){
+            int [] rowCopy = new int[9];
+            System.arraycopy(board[index],0,rowCopy,0,9);
+            return rowCopy;
+        }
+        else{throw new IllegalArgumentException("Invalid index");}
 
+    }
+
+    public int[] getColumn(int index){
+        if(index>=0 && index <=8){
+            return null;
+        }
+        return null;
+    }
 
 
     public int[][] getBoard() {
