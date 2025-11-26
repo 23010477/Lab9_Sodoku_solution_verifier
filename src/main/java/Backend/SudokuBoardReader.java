@@ -21,7 +21,14 @@ public class SudokuBoardReader {
         fileLine = bufferedReader.readLine();
 
 
-
+        while (fileLine != null && row < 9){
+            String[] boardValues = fileLine.split(",");
+            for (int column = 0 ; column <9; column++){
+                board[row][column] = Integer.parseInt(boardValues[column]);
+            }
+            row++;
+            fileLine = bufferedReader.readLine();
+        } //tm t3be2at el Array bnaga7
 
         }catch(IOException e){
             e.printStackTrace();
