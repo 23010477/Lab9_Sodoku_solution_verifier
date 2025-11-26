@@ -11,9 +11,10 @@ public class SudokuBoard {
         this.board = board;
     }
 
-    public synchronized static SudokuBoard getInstance(int[][] board){
+    public synchronized static SudokuBoard getInstance(String filePath){
         if(instance == null){
-            instance = new SudokuBoard(board);
+            int[][] readBoard = new SudokuBoardReader().ReadBoardFromFile(filePath);
+            instance = new SudokuBoard(readBoard);
         }
         return instance;
     }
