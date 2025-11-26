@@ -27,6 +27,16 @@ public class Main {
 
         }
 
+        int rowIndex = 0; // first row
+        int[] row = board.getRow(rowIndex);
+        System.out.print("\nRow " + rowIndex + ": ");
+        for (int val : row) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+
+
+
 
     }
 }
