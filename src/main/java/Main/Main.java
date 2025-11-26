@@ -44,7 +44,15 @@ public class Main {
         }
         System.out.println();
 
-
+        int boxIndex = 4; // middle box
+        int[][] box = board.get3x3Box(boxIndex);
+        System.out.println("Box " + boxIndex + ":");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(box[i][j] + " ");
+            }
+            System.out.println();
+        }
 
     }
 }
