@@ -12,4 +12,7 @@ public boolean columnValidation(int index) {
 public boolean boxValidation(int index){
 
 }
+public boolean boardValidation(int index){
+
+}
 }
