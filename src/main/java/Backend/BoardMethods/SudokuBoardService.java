@@ -32,7 +32,7 @@ int length=row.length;
     if(checkedValidation==true){
  return true;
     }else{
-      System.out.println("Row: " + (index+1)+"The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
+      System.out.println("Row: " + (index+1)+" The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
               "At location of "+duplicatedValuesLocation);
         return false;
     }
@@ -65,7 +65,7 @@ public boolean columnValidation(int index) {
     if(checkedValidation==true){
    return true;
     }else{
-        System.out.println("Column: " + (index+1) +"The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
+        System.out.println("Column: " + (index+1) +" The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
                 "At location of "+duplicatedValuesLocation);
         return false;
     }
@@ -105,7 +105,7 @@ public boolean boxValidation(int index){
 if(checkedValidation==true){
  return true;
 }else{
-    System.out.println("Box: " + (index+1)+"The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
+    System.out.println("Box: " + (index+1)+" The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
             "At location of "+duplicatedValuesLocation);
     return false;
 }
