@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SudokuBoardService {
-
+    private static final String PATH =
+            "C:/Users/CozyAk/IdeaProjects/Lab9-Sodoku_solution_verifier/src/main/java/Backend/BoardMethods/test.txt";
 public boolean rowValidation(int index){
-int[] row=SudokuBoard.getInstance().getRow(index);
+int[] row= SudokuBoard.getInstance(PATH).getRow(index);
     ArrayList<Integer> duplicatedValues=new ArrayList<>();
     ArrayList<String> duplicatedValuesLocation=new ArrayList<>();
     boolean checkedValidation=true;
@@ -39,7 +40,7 @@ int length=row.length;
 }
 
 public boolean columnValidation(int index) {
-        int[] column=SudokuBoard.getInstance().getColumn(index);
+        int[] column=SudokuBoard.getInstance(PATH).getColumn(index);
         int length=column.length;
         ArrayList<Integer> duplicatedValues=new ArrayList<>();
     ArrayList<String> duplicatedValuesLocation=new ArrayList<>();
@@ -71,7 +72,7 @@ public boolean columnValidation(int index) {
     }
     }
 public boolean boxValidation(int index){
- SudokuBoard SD =SudokuBoard.getInstance();
+ SudokuBoard SD =SudokuBoard.getInstance(PATH);
     ArrayList<Integer> duplicatedValues=new ArrayList<>();
     ArrayList<String> duplicatedValuesLocation=new ArrayList<>();
  int[][] box=SD.get3x3Box(index);
@@ -112,7 +113,7 @@ if(checkedValidation==true){
 
 }
 public boolean boardValidation(){
- int[][] board=SudokuBoard.getInstance().getBoard();
+ int[][] board=SudokuBoard.getInstance(PATH).getBoard();
     boolean checkedValidation=true;
  try {
      for(int i=0;i<9;i++){
