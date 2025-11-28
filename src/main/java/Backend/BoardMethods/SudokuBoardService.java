@@ -120,19 +120,28 @@ public boolean boardValidation(){
              checkedValidation= false;
          }
      }
+     System.out.println("-------------------------------------");
      for(int j=0;j<9;j++){
          if(!columnValidation(j)){
              checkedValidation= false;
          }
      }
+     System.out.println("-------------------------------------");
      for(int m=0;m<9;m++){
          if(!boxValidation(m)){
              checkedValidation= false;
          }
      }
+     System.out.println("-------------------------------------");
  }catch(IndexOutOfBoundsException e){
      e.printStackTrace();
  }
-    return checkedValidation;
+   if(checkedValidation){
+       System.out.println("Valid");
+       return true;
+   }else{
+       System.out.println("Invalid");
+       return false;
+   }
 }
 }
