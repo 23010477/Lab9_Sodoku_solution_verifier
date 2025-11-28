@@ -22,7 +22,7 @@ int length=row.length;
              {
                  checkedValidation= false;
                  duplicatedValues.add(row[i]);
-                 duplicatedValuesLocation.add(""+i);
+                 duplicatedValuesLocation.add("" + i + "," + j + "");
              }
          }
      }
@@ -32,7 +32,7 @@ int length=row.length;
     if(checkedValidation==true){
  return true;
     }else{
-      System.out.println("The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
+      System.out.println("Row: " + (index+1)+"The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
               "At location of "+duplicatedValuesLocation);
         return false;
     }
@@ -55,7 +55,7 @@ public boolean columnValidation(int index) {
                     {
                         checkedValidation= false;
                         duplicatedValues.add(column[i]);
-                        duplicatedValuesLocation.add(""+i);
+                        duplicatedValuesLocation.add("" + i + "," + j + "");
                     }
                 }
             }
@@ -65,7 +65,7 @@ public boolean columnValidation(int index) {
     if(checkedValidation==true){
    return true;
     }else{
-        System.out.println("The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
+        System.out.println("Column: " + (index+1) +"The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
                 "At location of "+duplicatedValuesLocation);
         return false;
     }
@@ -91,7 +91,7 @@ public boolean boxValidation(int index){
                     if(box[i][j]==box[m][n]) {
                         checkedValidation= false;
                         duplicatedValues.add(box[i][j]);
-                        duplicatedValuesLocation.add(i+","+j);
+                        duplicatedValuesLocation.add("" + i + "," + j + " & "+m+","+n+"");
 
                     }
                  }
@@ -105,7 +105,7 @@ public boolean boxValidation(int index){
 if(checkedValidation==true){
  return true;
 }else{
-    System.out.println("The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
+    System.out.println("Box: " + (index+1)+"The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
             "At location of "+duplicatedValuesLocation);
     return false;
 }
