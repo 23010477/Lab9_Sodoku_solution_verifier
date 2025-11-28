@@ -8,6 +8,7 @@ public class SudokuBoardService {
 public boolean rowValidation(int index){
 int[] row=SudokuBoard.getInstance().getRow(index);
     ArrayList<Integer> duplicatedValues=new ArrayList<>();
+    ArrayList<String> duplicatedValuesLocation=new ArrayList<>();
     boolean checkedValidation=true;
 int length=row.length;
  try{
@@ -20,6 +21,8 @@ int length=row.length;
              if(row[i]==row[j])
              {
                  checkedValidation= false;
+                 duplicatedValues.add(row[i]);
+                 duplicatedValuesLocation.add(""+i);
              }
          }
      }
@@ -27,9 +30,11 @@ int length=row.length;
      e.printStackTrace();
  }
     if(checkedValidation==true){
-
+ return true;
     }else{
-
+      System.out.println("The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
+              "At location of "+duplicatedValuesLocation);
+        return false;
     }
 }
 
@@ -37,6 +42,7 @@ public boolean columnValidation(int index) {
         int[] column=SudokuBoard.getInstance().getColumn(index);
         int length=column.length;
         ArrayList<Integer> duplicatedValues=new ArrayList<>();
+    ArrayList<String> duplicatedValuesLocation=new ArrayList<>();
     boolean checkedValidation=true;
         try{
             for(int i=0;i<length;i++){
@@ -48,6 +54,8 @@ public boolean columnValidation(int index) {
                     if(column[i]==column[j])
                     {
                         checkedValidation= false;
+                        duplicatedValues.add(column[i]);
+                        duplicatedValuesLocation.add(""+i);
                     }
                 }
             }
@@ -55,14 +63,17 @@ public boolean columnValidation(int index) {
             e.printStackTrace();
         }
     if(checkedValidation==true){
-
+   return true;
     }else{
-
+        System.out.println("The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
+                "At location of "+duplicatedValuesLocation);
+        return false;
     }
     }
 public boolean boxValidation(int index){
  SudokuBoard SD =SudokuBoard.getInstance();
     ArrayList<Integer> duplicatedValues=new ArrayList<>();
+    ArrayList<String> duplicatedValuesLocation=new ArrayList<>();
  int[][] box=SD.get3x3Box(index);
     boolean checkedValidation=true;
  try{
@@ -79,6 +90,8 @@ public boolean boxValidation(int index){
                      }
                     if(box[i][j]==box[m][n]) {
                         checkedValidation= false;
+                        duplicatedValues.add(box[i][j]);
+                        duplicatedValuesLocation.add(i+","+j);
 
                     }
                  }
@@ -90,9 +103,11 @@ public boolean boxValidation(int index){
  }
 
 if(checkedValidation==true){
-
+ return true;
 }else{
-
+    System.out.println("The case is "+checkedValidation+" The duplicated values are "+duplicatedValues+
+            "At location of "+duplicatedValuesLocation);
+    return false;
 }
 
 }
@@ -118,10 +133,6 @@ public boolean boardValidation(){
  }catch(IndexOutOfBoundsException e){
      e.printStackTrace();
  }
-    if(checkedValidation==true){
-
-    }else{
-
-    }
+    return checkedValidation;
 }
 }
