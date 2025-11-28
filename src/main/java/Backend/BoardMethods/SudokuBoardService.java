@@ -7,6 +7,7 @@ public class SudokuBoardService {
 
 public boolean rowValidation(int index){
 int[] row=SudokuBoard.getInstance().getRow(index);
+    ArrayList<Integer> duplicatedValues=new ArrayList<>();
     boolean checkedValidation=true;
 int length=row.length;
  try{
@@ -19,8 +20,6 @@ int length=row.length;
              if(row[i]==row[j])
              {
                  checkedValidation= false;
-                 System.out.println("The validation is: "+checkedValidation+"at the index of "+i+" and "+j+
-                         " The duplicated value is: "+row[i]);
              }
          }
      }
@@ -37,6 +36,7 @@ int length=row.length;
 public boolean columnValidation(int index) {
         int[] column=SudokuBoard.getInstance().getColumn(index);
         int length=column.length;
+        ArrayList<Integer> duplicatedValues=new ArrayList<>();
     boolean checkedValidation=true;
         try{
             for(int i=0;i<length;i++){
@@ -48,8 +48,6 @@ public boolean columnValidation(int index) {
                     if(column[i]==column[j])
                     {
                         checkedValidation= false;
-                        System.out.println("The validation is: "+checkedValidation+"at the index of "+i+" and "+j+
-                                " The duplicated value is: "+column[i]);
                     }
                 }
             }
@@ -64,6 +62,7 @@ public boolean columnValidation(int index) {
     }
 public boolean boxValidation(int index){
  SudokuBoard SD =SudokuBoard.getInstance();
+    ArrayList<Integer> duplicatedValues=new ArrayList<>();
  int[][] box=SD.get3x3Box(index);
     boolean checkedValidation=true;
  try{
@@ -80,8 +79,7 @@ public boolean boxValidation(int index){
                      }
                     if(box[i][j]==box[m][n]) {
                         checkedValidation= false;
-                        System.out.println("The validation is: "+checkedValidation+"at the index of "+i+" and "+j+
-                                " The duplicated value is: "+box[i][j]);
+
                     }
                  }
              }
