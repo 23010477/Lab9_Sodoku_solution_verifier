@@ -5,6 +5,7 @@ import java.util.List;
 
 public class SudokuBoardService {
     private static final String PATH =
+
             "C:/Users/CozyAk/IdeaProjects/Lab9-Sodoku_solution_verifier/src/main/java/Backend/BoardMethods/test.txt";
 public boolean rowValidation(int index){
 int[] row= SudokuBoard.getInstance(PATH).getRow(index);
