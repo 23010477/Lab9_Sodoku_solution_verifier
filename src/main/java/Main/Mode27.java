@@ -23,9 +23,9 @@ public class Mode27  extends SudokuBoardService implements Runnable{
         for(int i=0; i<9; i++) {
         	int index =i;
         	Thread r = new Thread(() ->{
-        		if(!rowValidation(i)) {
+        		if(!rowValidation(index)) {
         			  synchronized (errors) {
-        				  errors.add("Row " + (i + 1) + " invalid");
+        				  errors.add("Row " + (index + 1) + " invalid");
         			  }
         			
         			
@@ -38,10 +38,11 @@ public class Mode27  extends SudokuBoardService implements Runnable{
         }
         // 9 col threads 
         for(int i=0; i<9; i++) {
+        	int index=i;
         	Thread c = new Thread(() ->{
-        		if(!columnValidation(i)) {
+        		if(!columnValidation(index)) {
         			  synchronized (errors) {
-        				  errors.add("Column" + (i + 1) + " invalid");
+        				  errors.add("Column" + (index + 1) + " invalid");
         			  }
         			
         			
@@ -52,14 +53,28 @@ public class Mode27  extends SudokuBoardService implements Runnable{
             threads.add(c);
         	
         }
+        // 9 box threads 
+        for(int i=0;i<9;i++) {
+        	int index= i ;
+        	Thread b = new Thread(() ->{
+        		if(!boxValidation(index)) {
+        			  synchronized (errors) {
+        				  errors.add("Box" + (index + 1) + " invalid");
+        			  }
+        			
+        			
+        		}
+        		
+        	});
+        	
+            threads.add(b);
+        	
+        }
 		return errors;
         
         
     }
-		return errors;
-        
-        
-    }
+		
     
 	@Override
 	public void run() {
