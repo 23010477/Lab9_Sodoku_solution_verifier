@@ -1,5 +1,7 @@
 package Main;
 
-public class Mode27 {
-    
+import Backend.BoardMethods.SudokuBoardService;
+
+public class Mode27  extends SudokuBoardService implements Runnable{
+	
 }
