@@ -104,7 +104,7 @@ public class Mode27  extends SudokuBoardService implements Runnable{
 
         Mode27 mode27 = new Mode27(board);
         mode27.run();
-        System.out.println("Mode 3 completed");
+        System.out.println("Mode 27 completed");
         try{
             if(mode27.validateBoard().isEmpty()) {
                 System.out.println("Board is valid");
