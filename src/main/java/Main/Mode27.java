@@ -36,6 +36,26 @@ public class Mode27  extends SudokuBoardService implements Runnable{
             threads.add(r);
         	
         }
+        // 9 col threads 
+        for(int i=0; i<9; i++) {
+        	Thread c = new Thread(() ->{
+        		if(!columnValidation(i)) {
+        			  synchronized (errors) {
+        				  errors.add("Column" + (i + 1) + " invalid");
+        			  }
+        			
+        			
+        		}
+        		
+        	});
+        	
+            threads.add(c);
+        	
+        }
+		return errors;
+        
+        
+    }
 		return errors;
         
         
