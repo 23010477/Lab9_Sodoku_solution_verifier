@@ -30,7 +30,8 @@ public class VerifyMe {
             System.out.println();
         }
 
-
+        Runnable validator = ValidatorFactory.createValidator(board,validationMode);
+        validator.run();
 
 
 
