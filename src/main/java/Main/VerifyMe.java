@@ -9,7 +9,6 @@ import Backend.BoardMethods.ValidatorFactory;
 
 public class VerifyMe {
 
-
     public static void main(String[] args) {
         if (args.length != 2) { // [0] is the mode , [1] is the filepath.
             System.out.println("Please Provide Valid Arguments!");
