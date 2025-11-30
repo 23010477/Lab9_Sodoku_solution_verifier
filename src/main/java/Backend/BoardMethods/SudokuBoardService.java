@@ -3,7 +3,7 @@ package Backend.BoardMethods;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SudokuBoardService {
+public abstract class SudokuBoardService {
     private static final String PATH =
 
             "C:/Users/CozyAk/IdeaProjects/Lab9-Sodoku_solution_verifier/src/main/java/Backend/BoardMethods/test.txt";

@@ -63,7 +63,7 @@ public class Mode3 extends SudokuBoardService implements Runnable {
         finalErrors.addAll(colErrors);
         finalErrors.addAll(boxErrors);
 
-        if(this.validateBoard().isEmpty()) {
+        if(finalErrors.isEmpty()) {
             System.out.println("Board is valid");
         } else {
             System.out.println("Board is invalid");
