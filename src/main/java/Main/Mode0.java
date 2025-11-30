@@ -8,6 +8,7 @@ import java.util.List;
 public class Mode0 extends SudokuBoardService implements Runnable {
     private SudokuBoard board;
 
+
     public Mode0(SudokuBoard board) {
         this.board = board;
     }

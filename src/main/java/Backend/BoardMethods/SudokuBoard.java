@@ -4,6 +4,7 @@ public class SudokuBoard {
     private final int[][] board;
     private static SudokuBoard instance;
 
+
     private SudokuBoard(int[][] board) {
         this.board = board;
     }

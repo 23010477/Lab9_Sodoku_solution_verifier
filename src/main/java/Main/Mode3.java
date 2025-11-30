@@ -7,6 +7,7 @@ import Backend.BoardMethods.*;
 
 public class Mode3 extends SudokuBoardService implements Runnable {
     private SudokuBoard board;
+
     public Mode3(SudokuBoard board ) {
         this.board = board;
     }

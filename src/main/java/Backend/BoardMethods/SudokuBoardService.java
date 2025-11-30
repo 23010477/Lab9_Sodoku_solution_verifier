@@ -9,6 +9,7 @@ public abstract class SudokuBoardService {
             "C:/Users/CozyAk/IdeaProjects/Lab9-Sodoku_solution_verifier/src/main/java/Backend/BoardMethods/test.txt";
 
     public boolean rowValidation(int index) {
+
         int[] row = SudokuBoard.getInstance(PATH).getRow(index);
         ArrayList<Integer> duplicatedValues = new ArrayList<>();
         ArrayList<String> duplicatedValuesLocation = new ArrayList<>();
