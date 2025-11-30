@@ -17,17 +17,17 @@ public class Mode0 extends SudokuBoardService {
 
         for(int i=0;i<9;i++){
            if(rowValidation(i)==false){
-               rowErrors.add("Error in row"+(i+1));
+               rowErrors.add("Error in row: "+(i+1));
            }
         }
         for(int i=0;i<9;i++){
             if(columnValidation(i)==false){
-                columnErrors.add("Error in Column"+(i+1));
+                columnErrors.add("Error in Column: "+(i+1));
             }
         }
         for(int i=0;i<9;i++){
             if(boxValidation(i)==false){
-                boxErrors.add("Error in box"+(i+1));
+                boxErrors.add("Error in box: "+(i+1));
             }
         }
         ArrayList<String> finalErrors = new ArrayList<>();
