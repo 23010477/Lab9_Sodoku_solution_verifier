@@ -3,6 +3,7 @@ package Main;
 import Backend.BoardMethods.SudokuBoard;
 import Backend.BoardMethods.SudokuBoardReader;
 import Backend.BoardMethods.SudokuBoardService;
+import Backend.BoardMethods.ValidatorFactory;
 
 //El CLI HENAA
 
@@ -28,6 +29,10 @@ public class VerifyMe {
             }
             System.out.println();
         }
+
+
+
+
 
     }
 
