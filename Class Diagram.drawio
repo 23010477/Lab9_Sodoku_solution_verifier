@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.1.1">
+  <diagram name="Page-1" id="uxxXZOiMvBzUugfGyO_u">
+    <mxGraphModel dx="544" dy="1720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="L2rkkpl6IY1nEZIABVug-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SudokuBoardReader" vertex="1">
+          <mxGeometry height="86" width="290" x="40" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-6" parent="L2rkkpl6IY1nEZIABVug-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ field: type" vertex="1">
+          <mxGeometry height="26" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-7" parent="L2rkkpl6IY1nEZIABVug-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-8" parent="L2rkkpl6IY1nEZIABVug-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ ReadBoardFromFile(String filename): int[][]" vertex="1">
+          <mxGeometry height="26" width="290" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-9" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SudokuBoard &amp;lt;&amp;lt;singleton&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="200" width="250" x="30" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-17" edge="1" parent="L2rkkpl6IY1nEZIABVug-9" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;fontSize=12;curved=1;" target="L2rkkpl6IY1nEZIABVug-5" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="120" as="sourcePoint" />
+            <mxPoint x="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-10" parent="L2rkkpl6IY1nEZIABVug-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- board: int[9][9]&lt;br&gt;-instance : SudokuBoard &amp;lt;&amp;lt;static&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="64" width="250" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-11" parent="L2rkkpl6IY1nEZIABVug-9" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-12" parent="L2rkkpl6IY1nEZIABVug-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+getRow(int index): int[]&lt;div&gt;+getColumn(int index):&amp;nbsp;int[]&lt;/div&gt;&lt;div&gt;+getBox(int index): int[]&lt;/div&gt;&lt;div&gt;+getBoard(): int[][]&lt;br&gt;+getInstance(int[][] board): SudokuBoard&lt;/div&gt;" vertex="1">
+          <mxGeometry height="102" width="250" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-13" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SudokuBoardService" vertex="1">
+          <mxGeometry height="104" width="210" x="420" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-15" parent="L2rkkpl6IY1nEZIABVug-13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="210" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-16" parent="L2rkkpl6IY1nEZIABVug-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="rowValidation(int index):boolean&lt;br&gt;columnValidation(int index):boolean&lt;br&gt;boxValidation(int index):boolean&lt;br&gt;BoardValidation(int index):boolean" vertex="1">
+          <mxGeometry height="70" width="210" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-18" edge="1" parent="1" source="L2rkkpl6IY1nEZIABVug-13" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;fontSize=12;curved=1;" target="L2rkkpl6IY1nEZIABVug-9" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="260" y="110" as="sourcePoint" />
+            <mxPoint x="420" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-19" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Output" vertex="1">
+          <mxGeometry height="150" width="160" x="560" y="-26" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-21" parent="L2rkkpl6IY1nEZIABVug-19" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="L2rkkpl6IY1nEZIABVug-22" parent="L2rkkpl6IY1nEZIABVug-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="neb2a n4oof&lt;div&gt;t2reeban 7aye4ta88al Arraylist of strings bas neb2a n4oof 7nqarar 3la 2no design&lt;/div&gt;" vertex="1">
+          <mxGeometry height="116" width="160" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="9I4ryxNJjIzNtfB4FGGm-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Mode0" vertex="1">
+          <mxGeometry height="220" width="190" x="180" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="9I4ryxNJjIzNtfB4FGGm-2" parent="9I4ryxNJjIzNtfB4FGGm-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-board: SudokuBoard" vertex="1">
+          <mxGeometry height="26" width="190" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9I4ryxNJjIzNtfB4FGGm-3" parent="9I4ryxNJjIzNtfB4FGGm-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="68" width="190" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="9I4ryxNJjIzNtfB4FGGm-4" parent="9I4ryxNJjIzNtfB4FGGm-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ method(type): type" vertex="1">
+          <mxGeometry height="100" width="190" y="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
